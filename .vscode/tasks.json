@@ -1,0 +1,81 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build SLN",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "/m" //,
+                // "${workspaceFolder}/AnyHub.Portal.sln",
+                // "/property:GenerateFullPaths=true",
+                // "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build API SERVICES",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/2-Services/AnyHub.Portal.Services.Api/AnyHub.Portal.Services.Api.csproj",
+                "/m"
+                // "/property:GenerateFullPaths=true",
+                // "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build WEB",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/0-App/AnyHub.Portal.Web/AnyHub.Portal.Web.csproj",
+                "/m"
+                // "/property:GenerateFullPaths=true",
+                // "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build AUTH IDENTITY",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/0-App/AnyHub.Portal.Authorization/AnyHub.Portal.Authorization.csproj",
+                "/m"
+                // "/property:GenerateFullPaths=true",
+                // "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/AnyHub.Portal.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/AnyHub.Portal.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

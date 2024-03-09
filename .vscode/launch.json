@@ -1,0 +1,80 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (web) Services API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build API SERVICES",
+            "program": "${workspaceFolder}/src/2-Services/AnyHub.Portal.Services.Api/bin/Debug/netcoreapp3.1/AnyHub.Portal.Services.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/2-Services/AnyHub.Portal.Services.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch (web) Services WEB",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build WEB",
+            "program": "${workspaceFolder}/src/0-App/AnyHub.Portal.Web/bin/Debug/netcoreapp3.1/AnyHub.Portal.Web.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/0-App/AnyHub.Portal.Web",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch (web) Services AUTH IDENTITY",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build AUTH IDENTITY",
+            "program": "${workspaceFolder}/src/0-App/AnyHub.Portal.Authorization/bin/Debug/netcoreapp3.1/AnyHub.Portal.Authorization.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/0-App/AnyHub.Portal.Authorization",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Debug Multiples",
+            "configurations": [".NET Core Launch (web) Services API", ".NET Core Launch (web) Services WEB", ".NET Core Launch (web) Services AUTH IDENTITY"]
+        }
+    ]
+    
+}
