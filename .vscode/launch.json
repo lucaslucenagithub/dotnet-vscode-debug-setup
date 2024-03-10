@@ -13,10 +13,6 @@
             "args": [],
             "cwd": "${workspaceFolder}/src/2-Services/AnyHub.Portal.Services.Api",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
@@ -33,10 +29,6 @@
             "args": [],
             "cwd": "${workspaceFolder}/src/0-App/AnyHub.Portal.Web",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
@@ -53,10 +45,6 @@
             "args": [],
             "cwd": "${workspaceFolder}/src/0-App/AnyHub.Portal.Authorization",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
